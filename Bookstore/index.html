@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script type="module" src="scripts.js"></script>
+		<script type="module" src="books.js"></script>
+
+		<title>Bookstore</title>
+	</head>
+	<body>
+		<header>
+			<h1>BOOKSTORE</h1>
+			<h3>Filter books:</h3>
+			<div id="filters">
+				<div class="button-list">
+					<p>Filter by page number:</p>
+					<div id="page-buttons">
+						<button id="short-books">100-300</button>
+						<button id="med-books">301-500</button>
+						<button id="long-books">501+</button>
+					</div>
+				</div>
+				<div class="button-list">
+					<p>New & Suggested</p>
+					<div id="new-buttons">
+						<button id="suggested">Suggested Books</button>
+						<button id="new">Sort by New</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main id="book-list"></main>
+	</body>
+</html>

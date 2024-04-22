@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    text-align: center;
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.button-list {
+    margin: 5px 10px 0 10px;
+}
+
+button {
+    min-width: 80px;
+    height: 25px;
+    margin: 10px 5px;
+}
+
+#book-list {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-card {
+    width: 160px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-cover {
+    height: 150px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.author {
+    font-size: 12px;
+}
+
+.price {
+    text-align: right;
+    margin-top: 10px;
+}

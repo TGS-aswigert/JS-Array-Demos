@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    height: 30px;
+    background-color: rgb(117, 237, 117);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    border: 3px solid rgb(92, 202, 92);
+}
+
+#add-item {
+    margin: 10px auto;
+}
+
+#add-item input {
+    min-width: 200px;
+    width: 40vw;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+    margin-right: 0;
+    padding: 10px;
+}
+
+#add-item button {
+    width: 100px;
+    border-radius: 0 5px 5px 0;
+    margin-left: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    background-color: rgb(117, 237, 117);
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 5px auto;
+}
+
+.delete-item {
+    padding: 0 8px;
+    background-color: white;
+    border: 0;
+    border: 3px solid white;
+
+}
+
+.delete-item:active {
+    border: 3px solid rgb(202, 202, 202);
+}
