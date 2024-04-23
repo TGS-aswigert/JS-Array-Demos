@@ -3,14 +3,20 @@ const input = document.getElementById("input-text");
 let todoItems = ["Buy groceries", "Give the dog a bath", "Buy baby shower gift"];
 
 function renderList() {
-    clearList();
-    // todoItems.forEach((elementText, key) => {
-    //     createTodoItem(elementText, key);
-    //  });
+	clearList();
+	todoItems
+		.map(item => item.toLowerCase().split(" ").map(toTitleCase).join(" "))
+		.forEach((elementText, key) => {
+			createTodoItem(elementText, key);
+		});
+}
+
+function toTitleCase(word) {
+	return word.charAt(0).toUpperCase().concat(word.slice(1));
 }
 
 function clearList() {
-    itemList.innerHTML = "";
+	itemList.innerHTML = "";
 }
 
 function createTodoItem(itemText, key) {
@@ -28,23 +34,23 @@ function createTodoItem(itemText, key) {
 	const deleteButton = document.createElement("button");
 	deleteButton.innerText = "Delete";
 	deleteButton.className = "delete-item";
-    deleteButton.onclick = () => removeItem(key);
+	deleteButton.onclick = () => removeItem(key);
 
 	todoItem.appendChild(checkbox);
 	todoItem.appendChild(todoText);
 	todoItem.appendChild(deleteButton);
 
-    itemList.appendChild(todoItem);
+	itemList.appendChild(todoItem);
 }
 
-// function addItem() {
-// 	const inputText = input.value;
-// 	todoItems.push(inputText);
-//     renderList();
-//     input.value = "";
-// }
+function addItem() {
+	const inputText = input.value;
+	todoItems.push(inputText);
+	renderList();
+	input.value = "";
+}
 
-// function removeItem(key) {
-//     todoItems.splice(key, 1);
-//     renderList();
-// }
+function removeItem(key) {
+	todoItems.splice(key, 1);
+	renderList();
+}
