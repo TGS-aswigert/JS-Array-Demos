@@ -34,6 +34,7 @@ button {
     min-width: 80px;
     height: 25px;
     margin: 10px 5px;
+    padding: 0 5px;
 }
 
 #book-list {

@@ -62,8 +62,10 @@ function filterLongBooks() {
 	});
 }
 
-function sortByNewlyAdded() {
-	return books.reverse();
+function sortByNewest() {
+	return books.sort((a, b) => {
+		return a.year - b.year;
+	});
 }
 
 renderBookList(books);
@@ -80,9 +82,10 @@ document.getElementById("long-books").addEventListener("click", () => {
 	renderBookList(filterLongBooks());
 });
 
-document.getElementById("new").addEventListener("click", () => {
-	renderBookList(sortByNewlyAdded());
+document.getElementById("newest").addEventListener("click", () => {
+	renderBookList(sortByNewest());
 });
 
-//TODO: add pop to go back a page
-//TODO: add sort
+document.getElementById("oldest").addEventListener("click", () => {
+	renderBookList(sortByNewest().reverse());
+});
