@@ -18,7 +18,7 @@ function renderBookList(bookArray) {
 		textBlock.className = "text";
 
 		let title = document.createElement("p");
-		title.innerText = book.title;
+		title.innerText = book.title.slice(0, 30);
 		title.className = "title";
 
 		let author = document.createElement("p");
@@ -56,6 +56,18 @@ function filterMedBooks() {
 	});
 }
 
+function filterLongBooks() {
+	return books.filter(book => {
+		return book.pages > 500;
+	});
+}
+
+function sortByOldest() {
+	return books.sort((a, b) => {
+		return a.year - b.year;
+	});
+}
+
 renderBookList(books);
 
 document.getElementById("short-books").addEventListener("click", () => {
@@ -68,4 +80,12 @@ document.getElementById("med-books").addEventListener("click", () => {
 
 document.getElementById("long-books").addEventListener("click", () => {
 	renderBookList(filterLongBooks());
+});
+
+document.getElementById("oldest").addEventListener("click", () => {
+	renderBookList(sortByOldest());
+});
+
+document.getElementById("newest").addEventListener("click", () => {
+	renderBookList(sortByOldest().reverse());
 });
